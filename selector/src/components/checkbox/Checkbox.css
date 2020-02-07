@@ -20,7 +20,7 @@
 .badge > input:hover,
 .badge > label:hover {
     cursor: pointer;
-    background: white;
+    background: rgb(220,220,220);
 }
 
 .badge.selected {

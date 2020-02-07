@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /.pnp
+/src/__snapshots__
 .pnp.js
 
 # testing

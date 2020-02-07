@@ -6,10 +6,6 @@ import Checkbox from "../checkbox/Checkbox";
 import "./CheckboxGroup.css";
 
 export default class CheckboxGroup extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   get chunks() {
     return chunk(this.props.source, itemsInRow);
   }
@@ -48,4 +44,12 @@ export default class CheckboxGroup extends React.Component {
       </div>
     );
   }
+}
+
+CheckboxGroup.propTypes = {
+  source: PropTypes.array.isRequired,
+}
+
+CheckboxGroup.defaultProps = {
+  source: undefined
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { chunk, isUndefined } from "lodash";
 import CheckboxGroup from "../checkboxGroup/CheckboxGroup";
 import CloseIcon from "../closeIcon/closeIcon";
@@ -7,23 +8,12 @@ import {
   removeUniqueArrayValue
 } from "../../utils/arrayUtils";
 import { itemsInRow } from "../../utils/constants";
-import "./currencyPanel.css";
+import "./selectorPanel.css";
 
-export default class CurrencyPanel extends React.Component {
+export default class SelectorPanel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      source: [
-        { label: "EUR", value: "EUR" },
-        { label: "PLN", value: "PLN" },
-        { label: "GEL", value: "GEL" },
-        { label: "DKK", value: "DKK" },
-        { label: "CZK", value: "CZK" },
-        { label: "GBP", value: "GBP" },
-        { label: "SEK", value: "SEK" },
-        { label: "USD", value: "USD" },
-        { label: "RUB", value: "RUB" }
-      ],
       selectedItems: []
     };
   }
@@ -89,7 +79,7 @@ export default class CurrencyPanel extends React.Component {
         <CheckboxGroup
           onSelected={this.onSelected}
           selectedItems={this.state.selectedItems}
-          source={this.state.source}
+          source={this.props.source}
         />
       </div>
     );
@@ -104,3 +94,7 @@ export default class CurrencyPanel extends React.Component {
     );
   }
 }
+
+SelectorPanel.propTypes = {
+  source: PropTypes.arrayOf(Object)
+};

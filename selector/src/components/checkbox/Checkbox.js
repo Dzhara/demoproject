@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Checkbox as CheckboxSemantic } from 'semantic-ui-react';
-
-import './Checkbox.css';
+import style from  './Checkbox.module.scss';
 export default class Checkbox extends React.Component {
 
     constructor(props) {
@@ -19,7 +18,7 @@ export default class Checkbox extends React.Component {
     }
 
     render() {
-        const className = ['badge', this.props.checked ? 'selected' : null].join(' ');
+        const className = [style.badge, this.props.checked ? style.selected : null].join(' ');
         return (
             <CheckboxSemantic
                 className={className}

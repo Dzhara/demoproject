@@ -8,7 +8,7 @@ import {
   removeUniqueArrayValue
 } from "../../utils/arrayUtils";
 import { itemsInRow } from "../../utils/constants";
-import "./selectorPanel.css";
+import style from "./SelectorPanel.module.scss";
 
 export default class SelectorPanel extends React.Component {
   constructor(props) {
@@ -45,7 +45,7 @@ export default class SelectorPanel extends React.Component {
   selectedItemTemplate = el => {
     return (
       <div
-        className='selectedItem'
+        className={style.selectedItem}
         onClick={() => {
           this.onDeselected(el);
         }}
@@ -59,10 +59,13 @@ export default class SelectorPanel extends React.Component {
 
   selectedItemsTemplate = () => {
     return (
-      <div className='selectedItemsWrapper'>
+      <div className={style.selectedItemsWrapper}>
         {this.chunks.map((chunk, index) => {
           return (
-            <div className={"rowWrapper"} key={`selected-items-row-${index}`}>
+            <div
+              className={style.rowWrapper}
+              key={`selected-items-row-${index}`}
+            >
               {chunk.map(el => {
                 return this.selectedItemTemplate(el);
               })}
@@ -75,7 +78,7 @@ export default class SelectorPanel extends React.Component {
 
   availableItemsTemplate = () => {
     return (
-      <div className='itemsWrapper'>
+      <div className={style.itemsWrapper}>
         <CheckboxGroup
           onSelected={this.onSelected}
           selectedItems={this.state.selectedItems}
@@ -87,7 +90,7 @@ export default class SelectorPanel extends React.Component {
 
   render() {
     return (
-      <div className='panelContainer'>
+      <div className={style.panelContainer}>
         {this.selectedItemsTemplate()}
         {this.availableItemsTemplate()}
       </div>

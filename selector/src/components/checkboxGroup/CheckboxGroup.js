@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { chunk } from "lodash";
 import { itemsInRow } from "../../utils/constants";
 import Checkbox from "../checkbox/Checkbox";
-import "./CheckboxGroup.css";
+import style from "./CheckboxGroup.module.scss";
 
 export default class CheckboxGroup extends React.Component {
   get chunks() {
@@ -12,7 +12,7 @@ export default class CheckboxGroup extends React.Component {
 
   render() {
     return (
-      <div className={"checkboxGroupWrapper"}>
+      <div className={style.checkboxGroupWrapper}>
         {this.chunks.map((chunk, index) => {
           return (
             <div key={`checkbox-row-${index}`}>

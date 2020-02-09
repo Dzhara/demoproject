@@ -1,9 +1,11 @@
+@import '../../assets/colors.scss';
+
 .badge {
-    background-color: #E5E5E5;
+    background-color: $color-light-grey;
     padding: 3px 0;
     margin: 10px;
-    border: 1px solid rgb(163,163,163);
-    color: rgb(30,67,110);
+    border: 1px solid $color-border-grey;
+    color: $color-blue;
     font-weight: 500;
     width: 85px;
     text-align: left;
@@ -20,7 +22,7 @@
 .badge > input:hover,
 .badge > label:hover {
     cursor: pointer;
-    background: rgb(220,220,220);
+    background: $color-light-grey-hover;
 }
 
 .badge.selected {
@@ -31,12 +33,11 @@ input:focus {
     outline:none;
 }
 
-
 input[type="checkbox"]{
     -webkit-appearance: initial;
     appearance: initial;
     width: 12px;
-    border: 1px solid  rgb(163,163,163);
+    border: 1px solid  $color-border-grey;
     border-radius: 2px;
     height: 12px;
     position: relative;

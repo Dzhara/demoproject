@@ -1,6 +1,6 @@
 import React from "react";
-import SelectorPanel from "./components/selectorPanel/selectorPanel";
-import "./App.css";
+import SelectorPanel from "./components/selectorPanel/SelectorPanel";
+import style from "./App.module.scss";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -22,7 +22,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div className='App'>
+      <div className={style.app}>
         <div>Selector demo</div>
         <SelectorPanel source={this.state.source} />
       </div>

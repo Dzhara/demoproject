@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox snapshot renders 1`] = `
+<div
+  className="ui checked checkbox badge selected"
+  onChange={[Function]}
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
+>
+  <input
+    checked={true}
+    className="hidden"
+    name={null}
+    readOnly={true}
+    tabIndex={0}
+    type="checkbox"
+  />
+  <label>
+    test
+  </label>
+</div>
+`;

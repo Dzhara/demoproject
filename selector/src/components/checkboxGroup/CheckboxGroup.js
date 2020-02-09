@@ -47,7 +47,8 @@ export default class CheckboxGroup extends React.Component {
 }
 
 CheckboxGroup.propTypes = {
-  source: PropTypes.array.isRequired,
+  source: PropTypes.arrayOf(Object).isRequired,
+  selectedItems: PropTypes.array
 }
 
 CheckboxGroup.defaultProps = {

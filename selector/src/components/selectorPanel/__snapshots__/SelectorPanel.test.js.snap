@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectorPanel snapshot renders 1`] = `
+<div
+  className="panelContainer"
+>
+  <div
+    className="selectedItemsWrapper"
+  />
+  <div
+    className="itemsWrapper"
+  >
+    <div
+      className="checkboxGroupWrapper"
+    >
+      <div>
+        <div
+          className="ui checkbox badge "
+          onChange={[Function]}
+          onClick={[Function]}
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+        >
+          <input
+            checked={false}
+            className="hidden"
+            name={null}
+            readOnly={true}
+            tabIndex={0}
+            type="checkbox"
+          />
+          <label>
+            test
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

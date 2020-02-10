@@ -27,7 +27,11 @@
 
 .badge.selected {
     background: white;
+    > label:hover {
+        background: white;
+    }
 }
+
 
 input:focus {
     outline:none;

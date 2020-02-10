@@ -3,6 +3,7 @@
 .panelContainer {
     margin-top: 20px;
     min-height: 120px;
+    cursor: default;
     padding: 10px;
     display: flex;
     border: 1px solid $color-border-grey;
@@ -10,39 +11,33 @@
     flex-direction: column;
     justify-content: space-between;  
     box-shadow: 2px 2px 3px $color-light-shadow;
-}
-
-.rowWrapper {
-  display: flex;
-}
-
-.selectedItem {
-  position: relative;
-  padding: 4px 0px;
-  background-color: $color-light-grey;
-  margin: 10px;
-  width: 85px;
-  border-radius: 2px;
-  font-size: 14px;
-  font-weight: 500;
-  color: $color-text-dark;
-}
-
-.icon {
-  position: absolute;
-  top: -10px;
-  right: -15px;
-  width: 24px;
-  height: 24px;
-}
-
-.itemsWrapper {
-  display: flex;
+    .rowWrapper {
+      display: flex;
+    }
+    .selectedItem {
+      position: relative;
+      padding: 4px 0px;
+      background-color: $color-light-grey;
+      margin: 10px;
+      width: 85px;
+      border-radius: 2px;
+      font-size: 14px;
+      font-weight: 500;
+      color: $color-text-dark;
+    }
+    .icon {
+      position: absolute;
+      top: -10px;
+      right: -15px;
+      width: 24px;
+      height: 24px;
+    }    
+    .itemsWrapper {
+      display: flex;
+    }      
 }
 
 
 
-.close:hover::before {
-  color: $color-dark-grey; 
-  cursor: pointer;
-}
+
+

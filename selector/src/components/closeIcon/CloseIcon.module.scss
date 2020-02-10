@@ -1,0 +1,32 @@
+@import '../../assets/colors.scss';
+
+.close {
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    top: -10px;
+    right: -10px;
+    background-color: $color-dark-grey;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid white;
+  }
+  
+  .close:before {
+    content: '⨉';
+    font-size: 13px;
+    color: white;
+    position: absolute;
+    top: -2px;
+    right: 3px;
+  }
+  
+  .close:hover {
+    border: 1px solid $color-dark-grey;
+    background-color: white;
+    cursor: pointer;
+  }
+
+  .close:hover::before {
+    color: $color-dark-grey;
+  }

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { chunk, isUndefined } from "lodash";
 import CheckboxGroup from "../checkboxGroup/CheckboxGroup";
-import CloseIcon from "../closeIcon/closeIcon";
+import CloseIcon from "../closeIcon/CloseIcon";
 import {
   addUniqueArrayValue,
   removeUniqueArrayValue
@@ -43,16 +43,16 @@ export default class SelectorPanel extends React.Component {
   };
 
   selectedItemTemplate = el => {
+
     return (
       <div
         className={style.selectedItem}
-        onClick={() => {
-          this.onDeselected(el);
-        }}
         key={`selected-item-${el}`}
       >
         {el}
-        <CloseIcon />
+        <CloseIcon onClick={() => {
+          this.onDeselected(el);
+        }} />
       </div>
     );
   };

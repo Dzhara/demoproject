@@ -3,5 +3,6 @@
 exports[`CloseIcon snapshot renders 1`] = `
 <div
   className="close"
+  onClick={[Function]}
 />
 `;

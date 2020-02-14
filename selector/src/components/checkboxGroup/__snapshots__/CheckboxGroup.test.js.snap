@@ -4,7 +4,9 @@ exports[`CheckboxGroup snapshot renders 1`] = `
 <div
   className="checkboxGroupWrapper"
 >
-  <div>
+  <div
+    className="checkboxGroupItem"
+  >
     <div
       className="ui checkbox badge "
       onChange={[Function]}

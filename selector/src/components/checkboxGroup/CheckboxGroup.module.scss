@@ -1,4 +1,10 @@
 .checkboxGroupWrapper {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    .checkboxGroupItem {
+        flex: 1 1 33%;
+        max-width: 33%;
+        min-width: 80px
+    }    
 }
+

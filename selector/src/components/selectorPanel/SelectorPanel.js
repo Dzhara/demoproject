@@ -1,13 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { chunk, isUndefined } from "lodash";
 import CheckboxGroup from "../checkboxGroup/CheckboxGroup";
 import CloseIcon from "../closeIcon/CloseIcon";
-import {
-  addUniqueArrayValue,
-  removeUniqueArrayValue
-} from "../../utils/arrayUtils";
-import { itemsInRow } from "../../utils/constants";
 import style from "./SelectorPanel.module.scss";
 
 export default class SelectorPanel extends React.Component {
@@ -18,32 +12,33 @@ export default class SelectorPanel extends React.Component {
     };
   }
 
-  get chunks() {
-    return chunk(this.state.selectedItems, itemsInRow);
-  }
-
   onDeselected = value => {
-    if (!isUndefined(value)) {
-      this.setState(prevState => {
-        const newValue = removeUniqueArrayValue(prevState.selectedItems, value);
-        return Object.assign({}, prevState, { selectedItems: newValue });
-      });
-    }
+    if (value === undefined) return;
+
+    this.setState(prevState => {
+      const newItems = prevState.selectedItems.slice();
+      const index = prevState.selectedItems.indexOf(value);
+      newItems.splice(index, 1);
+      return Object.assign({}, prevState, { selectedItems: newItems });
+    });
+
   };
 
-  onSelected = (value, state) => {
-    if (!isUndefined(value)) {
-      this.setState(prevState => {
-        const newValue = state
-          ? addUniqueArrayValue(prevState.selectedItems, value)
-          : removeUniqueArrayValue(prevState.selectedItems, value);
-        return Object.assign({}, prevState, { selectedItems: newValue });
-      });
-    }
+  onSelected = (value) => {
+    if (value === undefined) return;
+
+    this.setState(prevState => {
+      const newItems = prevState.selectedItems.slice();
+      const index = prevState.selectedItems.indexOf(value);
+      if (index === -1) {
+        newItems.push(value);
+      } else newItems.splice(index, 1);
+      return Object.assign({}, prevState, { selectedItems: newItems });
+    });
+
   };
 
   selectedItemTemplate = el => {
-
     return (
       <div
         className={style.selectedItem}
@@ -60,25 +55,18 @@ export default class SelectorPanel extends React.Component {
   selectedItemsTemplate = () => {
     return (
       <div className={style.selectedItemsWrapper}>
-        {this.chunks.map((chunk, index) => {
-          return (
-            <div
-              className={style.rowWrapper}
-              key={`selected-items-row-${index}`}
-            >
-              {chunk.map(el => {
-                return this.selectedItemTemplate(el);
-              })}
-            </div>
-          );
-        })}
+        {
+          this.state.selectedItems.map((el) => {
+            return this.selectedItemTemplate(el);
+          })
+        }
       </div>
     );
   };
 
   availableItemsTemplate = () => {
     return (
-      <div className={style.itemsWrapper}>
+      <div className={style.availableItemsWrapper}>
         <CheckboxGroup
           onSelected={this.onSelected}
           selectedItems={this.state.selectedItems}

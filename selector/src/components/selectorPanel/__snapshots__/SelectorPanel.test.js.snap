@@ -8,12 +8,14 @@ exports[`SelectorPanel snapshot renders 1`] = `
     className="selectedItemsWrapper"
   />
   <div
-    className="itemsWrapper"
+    className="availableItemsWrapper"
   >
     <div
       className="checkboxGroupWrapper"
     >
-      <div>
+      <div
+        className="checkboxGroupItem"
+      >
         <div
           className="ui checkbox badge "
           onChange={[Function]}

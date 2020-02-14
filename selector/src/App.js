@@ -15,7 +15,7 @@ export default class App extends React.Component {
         { label: "GBP", value: "GBP" },
         { label: "SEK", value: "SEK" },
         { label: "USD", value: "USD" },
-        { label: "RUB", value: "RUB" }
+        { label: "RUB", value: "RUB" },
       ]
     };
   }

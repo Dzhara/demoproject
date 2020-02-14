@@ -1,5 +1,12 @@
 import { isEqual } from 'lodash';
 
+
+// export const chunk = (source, size) => {
+//     return Array.from({ length: Math.ceil(source.length / size) }, (v, i) =>
+//         source.slice(i * size, i * size + size)
+//     )
+// }
+
 export const addUniqueArrayValue = (arr, option) => {
     const uniqueArr = arr.slice();
     const uniqueArrValue = uniqueArr.findIndex((el) => isEqual(el, option));

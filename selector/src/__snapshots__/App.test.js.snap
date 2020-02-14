@@ -14,12 +14,14 @@ exports[`App snapshot renders 1`] = `
       className="selectedItemsWrapper"
     />
     <div
-      className="itemsWrapper"
+      className="availableItemsWrapper"
     >
       <div
         className="checkboxGroupWrapper"
       >
-        <div>
+        <div
+          className="checkboxGroupItem"
+        >
           <div
             className="ui checkbox badge "
             onChange={[Function]}
@@ -39,6 +41,10 @@ exports[`App snapshot renders 1`] = `
               EUR
             </label>
           </div>
+        </div>
+        <div
+          className="checkboxGroupItem"
+        >
           <div
             className="ui checkbox badge "
             onChange={[Function]}
@@ -58,6 +64,10 @@ exports[`App snapshot renders 1`] = `
               PLN
             </label>
           </div>
+        </div>
+        <div
+          className="checkboxGroupItem"
+        >
           <div
             className="ui checkbox badge "
             onChange={[Function]}
@@ -78,7 +88,9 @@ exports[`App snapshot renders 1`] = `
             </label>
           </div>
         </div>
-        <div>
+        <div
+          className="checkboxGroupItem"
+        >
           <div
             className="ui checkbox badge "
             onChange={[Function]}
@@ -98,6 +110,10 @@ exports[`App snapshot renders 1`] = `
               DKK
             </label>
           </div>
+        </div>
+        <div
+          className="checkboxGroupItem"
+        >
           <div
             className="ui checkbox badge "
             onChange={[Function]}
@@ -117,6 +133,10 @@ exports[`App snapshot renders 1`] = `
               CZK
             </label>
           </div>
+        </div>
+        <div
+          className="checkboxGroupItem"
+        >
           <div
             className="ui checkbox badge "
             onChange={[Function]}
@@ -137,7 +157,9 @@ exports[`App snapshot renders 1`] = `
             </label>
           </div>
         </div>
-        <div>
+        <div
+          className="checkboxGroupItem"
+        >
           <div
             className="ui checkbox badge "
             onChange={[Function]}
@@ -157,6 +179,10 @@ exports[`App snapshot renders 1`] = `
               SEK
             </label>
           </div>
+        </div>
+        <div
+          className="checkboxGroupItem"
+        >
           <div
             className="ui checkbox badge "
             onChange={[Function]}
@@ -176,6 +202,10 @@ exports[`App snapshot renders 1`] = `
               USD
             </label>
           </div>
+        </div>
+        <div
+          className="checkboxGroupItem"
+        >
           <div
             className="ui checkbox badge "
             onChange={[Function]}

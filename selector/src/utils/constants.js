@@ -1,1 +1,1 @@
-export const itemsInRow = 3;
+// export const itemsInRow = 3;

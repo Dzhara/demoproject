@@ -16,12 +16,11 @@
       flex-wrap: wrap;
       .selectedItem {
         position: relative;
-        padding: 4px 0px;
-        flex: 1 1 25%;
+        padding: 4px 4px;
+        flex: 0 0 25%;
         background-color: $color-light-grey;
         margin: 10px;
         max-width: 25%;
-        min-width: 95px;
         border-radius: 2px;
         font-size: 14px;
         font-weight: 500;

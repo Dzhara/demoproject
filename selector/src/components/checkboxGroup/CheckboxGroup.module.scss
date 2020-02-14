@@ -2,9 +2,8 @@
     display: flex;
     flex-wrap: wrap;
     .checkboxGroupItem {
-        flex: 1 1 33%;
-        max-width: 33%;
-        min-width: 80px
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
     }    
 }
 
